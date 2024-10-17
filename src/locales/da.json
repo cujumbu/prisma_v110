@@ -23,7 +23,7 @@
   "checkClaimStatus": "Tjek sagsstatus",
   "status": "Status",
   "submissionDate": "Indsendelsesdato",
-  "adminDashboard": "Adminpanel",
+  "adminDashboard": "Admin dashboard",
   "filterByStatus": "Filtrer efter status",
   "searchByOrderNumber": "Søg efter ordrenummer",
   "actions": "Handlinger",
@@ -42,15 +42,15 @@
   "frequentlyAskedQuestions": "Ofte stillede spørgsmål",
   "warrantyFAQ": {
     "eligibilityQuestion": "Hvilke produkter er berettiget til garantisager?",
-    "eligibilityAnswer": "Alle produkter købt fra vores butik er berettiget til garantisager inden for den angivne garantiperiode. Garantiperioden varierer efter produkt og er angivet på produktsiden og din kvittering.",
-    "processQuestion": "Hvordan indsender jeg en garantisag?",
-    "processAnswer": "For at indsende en garantisag skal du udfylde formularen nedenfor med dit ordrenummer, kontaktoplysninger og en beskrivelse af problemet. Vi gennemgår din sag og vender tilbage til dig inden for 2-3 arbejdsdage.",
-    "timeframeQuestion": "Hvor lang tid tager garantisagsprocessen?",
-    "timeframeAnswer": "Garantisagsprocessen tager typisk 5-10 arbejdsdage fra det tidspunkt, vi modtager din sag. Dette inkluderer gennemgang, godkendelse og arrangering af reparation eller udskiftning."
+    "eligibilityAnswer": "Alle produkter købt fra vores butik er berettiget til garantisager inden for den angivne garantiperiode. Bemærk venligst, at det typisk ikke omfatter skader på rem, armbånd, krone eller glas, medmindre problemet opstår umiddelbart efter, du har modtaget produktet. Det dækker heller ikke batteriskift, medmindre batteriproblemet opstår inden for 6 måneder efter modtagelse af produktet. Alle garantikrav, der ikke overholder dette, er underlagt et håndterings- og forsendelsesgebyr på 300 DKK.",
+    "processQuestion": "Hvor lang tid tager garantisagsprocessen?",
+    "processAnswer": "For at opretholde produktgarantiens gyldighed kræver de fleste mærker, at deres eget servicecenter håndterer alle klager. Nogle mærker har centraliseret dette servicecenter for hele Europa, og derfor kan behandlingstiden være op til 5-7 uger på grund af transporttid. For mange mærker tager det dog typisk 1 til 2 uger.",
+    "timeframeQuestion": "Hvordan indsender jeg en garantisag?",
+    "timeframeAnswer": "For at indsende en garantisag skal du udfylde formularen nedenfor med dit ordrenummer, kontaktoplysninger og en kort, men præcis beskrivelse af problemet. Sørg for at inkludere den adresse, du ønsker, vi skal returnere produktet til, da den kan være anderledes end den, vi har registreret. Det er også meget vigtigt, at du kun sender uret og garantikortet, ikke uræsken, det kom i. Hvis du sender det i en æske, er vi ikke forpligtet til at returnere det med uræsken. Sørg for at beskytte uret så meget som muligt, da du er juridisk ansvarlig for transporten til os."
   },
   "returnFAQ": {
     "eligibilityQuestion": "Hvad er jeres returpolitik?",
-    "eligibilityAnswer": "Vi accepterer returneringer inden for 30 dage efter købet for de fleste varer. Varen skal være ubrugt og i samme stand, som du modtog den. Den skal også være i den originale emballage.",
+    "eligibilityAnswer": "Vi accepterer returneringer inden for 30 dage efter køb for de fleste varer. Varen skal være ubrugt og i samme stand, som du modtog den. Den skal også være i den originale emballage.",
     "processQuestion": "Hvordan starter jeg en returnering?",
     "processAnswer": "For at starte en returnering skal du udfylde formularen nedenfor med dit ordrenummer, e-mail og årsag til returnering. Når den er godkendt, giver vi dig instruktioner om returfragt.",
     "refundQuestion": "Hvornår modtager jeg min refusion?",
@@ -70,13 +70,13 @@
   "other": "Andet",
   "returnDescription": "Beskrivelse af returnering",
   "loading": "Indlæser...",
-  "noAdminUserExists": "Der findes ingen administratorbruger. Opret den første administratorkonto.",
-  "errorCheckingUserExistence": "Kunne ikke kontrollere brugerens eksistens. Serveren kan være utilgængelig.",
-  "adminCreatedSuccessfully": "Administrator oprettet med succes. Log venligst ind.",
-  "failedToCreateAdmin": "Kunne ikke oprette administratorbruger",
+  "noAdminUserExists": "Ingen adminbruger eksisterer. Opret den første adminkonto.",
+  "errorCheckingUserExistence": "Kunne ikke tjekke brugereksistens. Serveren er muligvis utilgængelig.",
+  "adminCreatedSuccessfully": "Admin oprettet med succes. Log venligst ind.",
+  "failedToCreateAdmin": "Kunne ikke oprette adminbruger",
   "invalidCredentials": "Ugyldige legitimationsoplysninger",
   "loginError": "Der opstod en fejl under login. Prøv venligst igen.",
-  "createAdminAccount": "Opret Administratorkonto",
+  "createAdminAccount": "Opret adminkonto",
   "password": "Adgangskode",
   "selectBrand": "Vælg et mærke",
   "importantNotice": "Vigtig meddelelse",
@@ -84,8 +84,8 @@
   "brandNotifications": {
     "Seiko": "Sørg venligst for, at du har det originale garantikort til Seiko-ure.",
     "Casio": "Casio kræver en kopi af købskvitteringen for alle garantikrav.",
-    "Timex": "Timex garantikrav skal indsendes inden for 30 dage efter problemet opstår.",
-    "Aistrup": "Aistrup-ure har en 2-årig garantiperiode fra købsdatoen.",
+    "Timex": "Timex garantikrav skal indsendes inden for 30 dage efter, at problemet er opstået.",
+    "Aistrup": "Aistrup-ure har en garantiperiode på 2 år fra købsdatoen.",
     "Fibex": "Fibex kræver detaljerede fotos af problemet for alle garantikrav.",
     "Others": "For mærker, der ikke er anført, bedes du give så mange oplysninger om købet og problemet som muligt."
   },
@@ -93,6 +93,8 @@
   "returns": "Returneringer",
   "all": "Alle",
   "enterOrderNumber": "Indtast ordrenummer",
-  "claimDetails": "Detaljer for garantisag",
-  "returnDetails": "Detaljer for returnering"
+  "claimDetails": "Detaljer om garantisag",
+  "returnDetails": "Detaljer om returnering",
+  "acknowledgeAndContinue": "Jeg forstår, fortsæt til næste",
+  "acknowledgeAndProceed": "Jeg forstår, fortsæt til formular"
 }
