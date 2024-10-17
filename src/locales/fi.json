@@ -96,5 +96,10 @@
   "claimDetails": "Takuutapauksen tiedot",
   "returnDetails": "Palautuksen tiedot",
   "acknowledgeAndContinue": "Ymmärrän, jatka seuraavaan",
-  "acknowledgeAndProceed": "Ymmärrän, siirry lomakkeeseen"
+  "acknowledgeAndProceed": "Ymmärrän, siirry lomakkeeseen",
+  "checkCaseStatus": "Tarkista tapauksen tila",
+  "noCaseFound": "Tapausta ei löytynyt",
+  "errorFetchingCase": "Tapauksen hakemisessa tapahtui virhe. Yritä uudelleen.",
+  "caseStatus": "Tapauksen tila",
+  "caseType": "Tapauksen tyyppi"
 }
