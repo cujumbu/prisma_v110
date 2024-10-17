@@ -1,7 +1,5 @@
 {
   "supportPortal": "Support Portal",
-  "acknowledgeAndContinue": "I understand, continue to next",
-  "acknowledgeAndProceed": "I understand, proceed to form",
   "home": "Home",
   "newWarrantyCase": "New Warranty Case",
   "newReturn": "New Return",
@@ -44,11 +42,11 @@
   "frequentlyAskedQuestions": "Frequently Asked Questions",
   "warrantyFAQ": {
     "eligibilityQuestion": "What products are eligible for warranty cases?",
-    "eligibilityAnswer": "All products purchased from our store are eligible for warranty cases within the specified warranty period. The warranty period varies by product and is listed on the product page and your receipt.",
-    "processQuestion": "How do I submit a warranty case?",
-    "processAnswer": "To submit a warranty case, fill out the form below with your order number, contact information, and a description of the issue. We'll review your case and get back to you within 2-3 business days.",
-    "timeframeQuestion": "How long does the warranty case process take?",
-    "timeframeAnswer": "The warranty case process typically takes 5-10 business days from the time we receive your case. This includes review, approval, and arranging for repair or replacement."
+    "eligibilityAnswer": "All products purchased from our store are eligible for warranty cases within the specified warranty period. Please note that it typically doesn't include strap damage, bracelet damage, crown damage or glass damage, unless the issue appears immediately after you've received the product. It does not cover battery changes either, unless the battery issue occurs within 6 months of receiving the product. Any warranty claims that don't abide by this are subject to a handling and shipment fee of 300 DKK.",
+    "processQuestion": "How long does the warranty case process take?",
+    "processAnswer": "To maintain the validity of the product warranty, most brands require that their own service center handles all complaints. Some brands have centralized this service center for all of Europe, and therefore processing times can be up to 5-7 weeks due to transportation time. However, for many brands, it typically takes 1 to 2 weeks.",
+    "timeframeQuestion": "How do I submit a warranty case?",
+    "timeframeAnswer": "To submit a warranty case, fill out the form below with your order number, contact information, and a short but precise description of the issue. Make sure to include the address you want us to return the product to, as that might be different from what we have on file. Also, it's very important that you only send the watch and the warranty card, not the watch box it came with. If you send it in a box, we are not required to return it with the watch box. Be sure to protect the watch as much as possible, as you are legally responsible for the transportation to us."
   },
   "returnFAQ": {
     "eligibilityQuestion": "What is your return policy?",
@@ -96,5 +94,7 @@
   "all": "All",
   "enterOrderNumber": "Enter order number",
   "claimDetails": "Warranty Case Details",
-  "returnDetails": "Return Details"
+  "returnDetails": "Return Details",
+  "acknowledgeAndContinue": "I understand, continue to next",
+  "acknowledgeAndProceed": "I understand, proceed to form"
 }
