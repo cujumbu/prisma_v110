@@ -18,7 +18,7 @@ const Header: React.FC = () => {
         <nav>
           <ul className="flex space-x-4">
             <li><Link to="/" className="hover:text-gray-300">{t('home')}</Link></li>
-            <li><Link to="/claim" className="hover:text-gray-300">{t('newClaim')}</Link></li>
+            <li><Link to="/claim" className="hover:text-gray-300">{t('newWarrantyCase')}</Link></li>
             <li><Link to="/return" className="hover:text-gray-300">{t('newReturn')}</Link></li>
             <li><Link to="/faq" className="hover:text-gray-300">{t('faq')}</Link></li>
             <li><Link to="/status" className="hover:text-gray-300">{t('checkStatus')}</Link></li>
