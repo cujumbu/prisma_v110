@@ -1,5 +1,7 @@
 {
   "supportPortal": "Support Portal",
+  "acknowledgeAndContinue": "I understand, continue to next",
+  "acknowledgeAndProceed": "I understand, proceed to form",
   "home": "Home",
   "newWarrantyCase": "New Warranty Case",
   "newReturn": "New Return",
