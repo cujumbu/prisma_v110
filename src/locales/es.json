@@ -1,5 +1,6 @@
 {
   "supportPortal": "Portal de Soporte",
+  "noCaseFound": "No se encontró ningún caso con el número de orden y correo electrónico proporcionados. Por favor, verifique su información e intente nuevamente.",
   "home": "Inicio",
   "newWarrantyCase": "Nuevo Caso de Garantía",
   "newReturn": "Nueva Devolución",
