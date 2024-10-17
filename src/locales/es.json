@@ -102,5 +102,11 @@
   "noCaseFound": "No se encontró ningún caso",
   "errorFetchingCase": "Ocurrió un error al obtener el caso. Por favor, inténtelo de nuevo.",
   "caseStatus": "Estado del caso",
-  "caseType": "Tipo de caso"
+  "caseType": "Tipo de caso",
+  "claim": "Reclamo de Garantía",
+  "return": "Devolución",
+  "pending": "Pendiente",
+  "inProgress": "En Progreso",
+  "resolved": "Resuelto",
+  "rejected": "Rechazado"
 }
