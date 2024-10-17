@@ -31,13 +31,14 @@ const ClaimStatus: React.FC = () => {
     try {
       const response = await fetch(`/api/cases/${id}`);
       if (!response.ok) {
-        throw new Error(await response.text());
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'errorFetchingCase');
       }
       const data = await response.json();
       setCaseData(data);
     } catch (error) {
       console.error('Error fetching case:', error);
-      setError(t('errorFetchingCase'));
+      setError(t(error.message));
     }
   };
 
@@ -48,17 +49,14 @@ const ClaimStatus: React.FC = () => {
     try {
       const response = await fetch(`/api/cases?orderNumber=${orderNumber}&email=${email}`);
       if (!response.ok) {
-        throw new Error(await response.text());
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'errorFetchingCase');
       }
       const data = await response.json();
-      if (!data) {
-        setError(t('noCaseFound'));
-      } else {
-        setCaseData(data);
-      }
+      setCaseData(data);
     } catch (error) {
       console.error('Error fetching case:', error);
-      setError(t('errorFetchingCase'));
+      setError(t(error.message));
     }
   };
 
