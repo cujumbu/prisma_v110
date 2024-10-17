@@ -111,7 +111,7 @@
   "claim": "Garantikrav",
   "return": "Returnering",
   "pending": "Afventer",
-  "inProgress": "I gang",
+  "inprogress": "I gang",
   "resolved": "Løst",
   "rejected": "Afvist"
 }
