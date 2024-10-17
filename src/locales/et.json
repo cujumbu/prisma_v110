@@ -96,5 +96,10 @@
   "claimDetails": "Garantiijuhtumi üksikasjad",
   "returnDetails": "Tagastuse üksikasjad",
   "acknowledgeAndContinue": "Ma saan aru, jätka järgmisega",
-  "acknowledgeAndProceed": "Ma saan aru, jätka vormiga"
+  "acknowledgeAndProceed": "Ma saan aru, jätka vormiga",
+  "checkCaseStatus": "Kontrolli juhtumi staatust",
+  "noCaseFound": "Juhtumit ei leitud",
+  "errorFetchingCase": "Juhtumi hankimisel tekkis viga. Palun proovige uuesti.",
+  "caseStatus": "Juhtumi staatus",
+  "caseType": "Juhtumi tüüp"
 }
