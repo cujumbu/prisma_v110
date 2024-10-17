@@ -96,5 +96,10 @@
   "claimDetails": "Detaljer om garantiärende",
   "returnDetails": "Detaljer om retur",
   "acknowledgeAndContinue": "Jag förstår, fortsätt till nästa",
-  "acknowledgeAndProceed": "Jag förstår, fortsätt till formulär"
+  "acknowledgeAndProceed": "Jag förstår, fortsätt till formulär",
+  "checkCaseStatus": "Kontrollera ärendestatus",
+  "noCaseFound": "Inget ärende hittades",
+  "errorFetchingCase": "Ett fel uppstod när ärendet hämtades. Försök igen.",
+  "caseStatus": "Ärendestatus",
+  "caseType": "Ärendetyp"
 }
