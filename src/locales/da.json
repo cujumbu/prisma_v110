@@ -1,5 +1,6 @@
 {
   "supportPortal": "Supportportal",
+  "noCaseFound": "Ingen sag fundet med det angivne ordrenummer og e-mail. Kontroller venligst dine oplysninger og prøv igen.",
   "home": "Hjem",
   "newWarrantyCase": "Ny garantisag",
   "newReturn": "Ny returnering",
