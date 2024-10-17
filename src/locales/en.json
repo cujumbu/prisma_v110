@@ -1,5 +1,6 @@
 {
   "supportPortal": "Support Portal",
+  "noCaseFound": "No case found with the provided order number and email. Please check your information and try again.",
   "home": "Home",
   "newWarrantyCase": "New Warranty Case",
   "newReturn": "New Return",
