@@ -13,7 +13,7 @@ const Home: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Link to="/claim" className="btn-primary inline-flex items-center justify-center">
           <FileText className="mr-2" />
-          {t('submitClaim')}
+          {t('submitWarrantyCase')}
         </Link>
         <Link to="/return" className="btn-primary inline-flex items-center justify-center">
           <RotateCcw className="mr-2" />
