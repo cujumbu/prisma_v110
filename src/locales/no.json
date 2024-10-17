@@ -96,5 +96,10 @@
   "claimDetails": "Detaljer om garantikrav",
   "returnDetails": "Detaljer om retur",
   "acknowledgeAndContinue": "Jeg forstår, fortsett til neste",
-  "acknowledgeAndProceed": "Jeg forstår, gå videre til skjemaet"
+  "acknowledgeAndProceed": "Jeg forstår, gå videre til skjemaet",
+  "checkCaseStatus": "Sjekk saksstatus",
+  "noCaseFound": "Ingen sak funnet",
+  "errorFetchingCase": "Det oppstod en feil ved henting av saken. Vennligst prøv igjen.",
+  "caseStatus": "Saksstatus",
+  "caseType": "Sakstype"
 }
