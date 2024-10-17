@@ -97,5 +97,11 @@
   "claimDetails": "Detaljer om garantisag",
   "returnDetails": "Detaljer om returnering",
   "acknowledgeAndContinue": "Jeg forstår, fortsæt til næste",
-  "acknowledgeAndProceed": "Jeg forstår, fortsæt til formular"
+  "acknowledgeAndProceed": "Jeg forstår, fortsæt til formular",
+  "claim": "Garantikrav",
+  "return": "Returnering",
+  "pending": "Afventer",
+  "inProgress": "I gang",
+  "resolved": "Løst",
+  "rejected": "Afvist"
 }
