@@ -31,7 +31,7 @@ const ClaimStatus: React.FC = () => {
     try {
       const response = await fetch(`/api/cases/${id}`);
       if (!response.ok) {
-        throw new Error(t('failedToFetchCase'));
+        throw new Error(await response.text());
       }
       const data = await response.json();
       setCaseData(data);
@@ -48,7 +48,7 @@ const ClaimStatus: React.FC = () => {
     try {
       const response = await fetch(`/api/cases?orderNumber=${orderNumber}&email=${email}`);
       if (!response.ok) {
-        throw new Error(t('failedToFetchCase'));
+        throw new Error(await response.text());
       }
       const data = await response.json();
       if (!data) {
