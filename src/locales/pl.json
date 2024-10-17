@@ -96,5 +96,10 @@
   "claimDetails": "Szczegóły zgłoszenia gwarancyjnego",
   "returnDetails": "Szczegóły zwrotu",
   "acknowledgeAndContinue": "Rozumiem, przejdź dalej",
-  "acknowledgeAndProceed": "Rozumiem, przejdź do formularza"
+  "acknowledgeAndProceed": "Rozumiem, przejdź do formularza",
+  "checkCaseStatus": "Sprawdź status sprawy",
+  "noCaseFound": "Nie znaleziono sprawy",
+  "errorFetchingCase": "Wystąpił błąd podczas pobierania sprawy. Proszę spróbować ponownie.",
+  "caseStatus": "Status sprawy",
+  "caseType": "Typ sprawy"
 }
