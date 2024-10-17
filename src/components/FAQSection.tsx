@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 interface FAQ {
   question: string;
@@ -9,35 +9,52 @@ interface FAQ {
 
 interface FAQSectionProps {
   faqs: FAQ[];
+  onComplete: () => void;
 }
 
-const FAQSection: React.FC<FAQSectionProps> = ({ faqs }) => {
+const FAQSection: React.FC<FAQSectionProps> = ({ faqs, onComplete }) => {
   const { t } = useTranslation();
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [currentFAQIndex, setCurrentFAQIndex] = useState(0);
+  const [acknowledgedFAQs, setAcknowledgedFAQs] = useState<boolean[]>(new Array(faqs.length).fill(false));
 
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const handleAcknowledge = () => {
+    const newAcknowledgedFAQs = [...acknowledgedFAQs];
+    newAcknowledgedFAQs[currentFAQIndex] = true;
+    setAcknowledgedFAQs(newAcknowledgedFAQs);
+
+    if (currentFAQIndex < faqs.length - 1) {
+      setCurrentFAQIndex(currentFAQIndex + 1);
+    } else {
+      onComplete();
+    }
   };
 
+  const currentFAQ = faqs[currentFAQIndex];
+
   return (
-    <div className="mb-8">
+    <div className="mb-8 bg-white p-6 rounded-lg shadow-md">
       <h3 className="text-xl font-semibold mb-4">{t('frequentlyAskedQuestions')}</h3>
       <div className="space-y-4">
-        {faqs.map((faq, index) => (
-          <div key={index} className="border border-gray-200 rounded-md">
-            <button
-              className="flex justify-between items-center w-full p-4 text-left"
-              onClick={() => toggleFAQ(index)}
-            >
-              <span className="font-medium">{t(faq.question)}</span>
-              {openIndex === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-            </button>
-            {openIndex === index && (
-              <div className="p-4 bg-gray-50">
-                <p>{t(faq.answer)}</p>
-              </div>
-            )}
-          </div>
+        <div className="border border-gray-200 rounded-md p-4">
+          <h4 className="font-medium mb-2">{t(currentFAQ.question)}</h4>
+          <p className="text-gray-600 mb-4">{t(currentFAQ.answer)}</p>
+          <button
+            onClick={handleAcknowledge}
+            className="flex items-center justify-center w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+          >
+            <Check className="mr-2" size={16} />
+            {currentFAQIndex < faqs.length - 1 ? t('acknowledgeAndContinue') : t('acknowledgeAndProceed')}
+          </button>
+        </div>
+      </div>
+      <div className="mt-4 flex justify-between">
+        {faqs.map((_, index) => (
+          <div
+            key={index}
+            className={`w-8 h-1 rounded ${
+              index <= currentFAQIndex ? 'bg-primary' : 'bg-gray-300'
+            }`}
+          ></div>
         ))}
       </div>
     </div>
