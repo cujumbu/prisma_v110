@@ -60,6 +60,11 @@ const ClaimStatus: React.FC = () => {
     }
   };
 
+  const getTranslatedStatus = (status: string) => {
+    const statusKey = status.toLowerCase().replace(/\s+/g, '');
+    return t(statusKey);
+  };
+
   return (
     <div className="max-w-md mx-auto mt-8 bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-4 text-gray-800">{t('checkCaseStatus')}</h2>
@@ -110,7 +115,7 @@ const ClaimStatus: React.FC = () => {
             </div>
             <div>
               <dt className="text-sm font-medium text-gray-500">{t('status')}</dt>
-              <dd className="mt-1 text-sm text-gray-900">{t(caseData.status.toLowerCase())}</dd>
+              <dd className="mt-1 text-sm text-gray-900">{getTranslatedStatus(caseData.status)}</dd>
             </div>
             <div>
               <dt className="text-sm font-medium text-gray-500">{t('submissionDate')}</dt>
