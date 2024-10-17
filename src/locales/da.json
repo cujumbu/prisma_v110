@@ -1,0 +1,11 @@
+{
+  ...
+  "noAdminUserExists": "Der findes ingen administratorbruger. Opret den første administratorkonto.",
+  "errorCheckingUserExistence": "Kunne ikke kontrollere brugerens eksistens. Serveren kan være utilgængelig.",
+  "adminCreatedSuccessfully": "Administrator oprettet med succes. Log venligst ind.",
+  "failedToCreateAdmin": "Kunne ikke oprette administratorbruger",
+  "invalidCredentials": "Ugyldige legitimationsoplysninger",
+  "loginError": "Der opstod en fejl under login. Prøv venligst igen.",
+  "createAdminAccount": "Opret Administratorkonto",
+  ...
+}
