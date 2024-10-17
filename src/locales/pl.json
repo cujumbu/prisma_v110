@@ -101,5 +101,11 @@
   "noCaseFound": "Nie znaleziono sprawy",
   "errorFetchingCase": "Wystąpił błąd podczas pobierania sprawy. Proszę spróbować ponownie.",
   "caseStatus": "Status sprawy",
-  "caseType": "Typ sprawy"
+  "caseType": "Typ sprawy",
+  "claim": "Roszczenie Gwarancyjne",
+  "return": "Zwrot",
+  "pending": "Oczekujące",
+  "inProgress": "W trakcie",
+  "resolved": "Rozwiązane",
+  "rejected": "Odrzucone"
 }
