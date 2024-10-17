@@ -96,5 +96,10 @@
   "claimDetails": "Details garantiezaak",
   "returnDetails": "Details retour",
   "acknowledgeAndContinue": "Ik begrijp het, ga door naar volgende",
-  "acknowledgeAndProceed": "Ik begrijp het, ga door naar formulier"
+  "acknowledgeAndProceed": "Ik begrijp het, ga door naar formulier",
+  "checkCaseStatus": "Controleer zaakstatus",
+  "noCaseFound": "Geen zaak gevonden",
+  "errorFetchingCase": "Er is een fout opgetreden bij het ophalen van de zaak. Probeer het opnieuw.",
+  "caseStatus": "Zaakstatus",
+  "caseType": "Zaaktype"
 }
