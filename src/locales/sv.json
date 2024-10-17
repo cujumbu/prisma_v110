@@ -101,5 +101,11 @@
   "noCaseFound": "Inget ärende hittades",
   "errorFetchingCase": "Ett fel uppstod när ärendet hämtades. Försök igen.",
   "caseStatus": "Ärendestatus",
-  "caseType": "Ärendetyp"
+  "caseType": "Ärendetyp",
+  "claim": "Garantianspråk",
+  "return": "Retur",
+  "pending": "Väntande",
+  "inProgress": "Pågående",
+  "resolved": "Löst",
+  "rejected": "Avvisat"
 }
