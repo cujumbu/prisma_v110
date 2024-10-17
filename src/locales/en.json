@@ -103,9 +103,9 @@
   "errorFetchingCase": "An error occurred while fetching the case. Please try again.",
   "caseStatus": "Case Status",
   "caseType": "Case Type",
-  "checkCaseStatus": "Tjek sagsstatus",
-  "noCaseFound": "Ingen sag fundet",
-  "errorFetchingCase": "Der opstod en fejl under hentning af sagen. Prøv venligst igen.",
-  "caseStatus": "Sagsstatus",
-  "caseType": "Sagstype"
+  "checkCaseStatus": "Check Case Status",
+  "noCaseFound": "No case found",
+  "errorFetchingCase": "Error fetching case.",
+  "caseStatus": "Case Status",
+  "caseType": "Case Type"
 }
