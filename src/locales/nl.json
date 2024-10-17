@@ -101,5 +101,11 @@
   "noCaseFound": "Geen zaak gevonden",
   "errorFetchingCase": "Er is een fout opgetreden bij het ophalen van de zaak. Probeer het opnieuw.",
   "caseStatus": "Zaakstatus",
-  "caseType": "Zaaktype"
+  "caseType": "Zaaktype",
+  "claim": "Garantieclaim",
+  "return": "Retournering",
+  "pending": "In behandeling",
+  "inProgress": "In uitvoering",
+  "resolved": "Opgelost",
+  "rejected": "Afgewezen"
 }
