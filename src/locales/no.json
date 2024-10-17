@@ -101,5 +101,11 @@
   "noCaseFound": "Ingen sak funnet",
   "errorFetchingCase": "Det oppstod en feil ved henting av saken. Vennligst prøv igjen.",
   "caseStatus": "Saksstatus",
-  "caseType": "Sakstype"
+  "caseType": "Sakstype",
+  "claim": "Garantikrav",
+  "return": "Retur",
+  "pending": "Venter",
+  "inProgress": "Under behandling",
+  "resolved": "Løst",
+  "rejected": "Avvist"
 }
