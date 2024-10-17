@@ -36,7 +36,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ faqs, onComplete }) => {
       <h3 className="text-xl font-semibold mb-4">{t('frequentlyAskedQuestions')}</h3>
       <div className="space-y-4">
         <div className="border border-gray-200 rounded-md p-4">
-          <h4 className="font-medium mb-2">{t(currentFAQ.question)}</h4>
+          <h4 className="text-lg font-bold mb-3 text-primary">{t(currentFAQ.question)}</h4>
           <p className="text-gray-600 mb-4">{t(currentFAQ.answer)}</p>
           <button
             onClick={handleAcknowledge}
