@@ -96,5 +96,10 @@
   "claimDetails": "Warranty Case Details",
   "returnDetails": "Return Details",
   "acknowledgeAndContinue": "I understand, continue to next",
-  "acknowledgeAndProceed": "I understand, proceed to form"
+  "acknowledgeAndProceed": "I understand, proceed to form",
+  "checkCaseStatus": "Check Case Status",
+  "noCaseFound": "No case found",
+  "errorFetchingCase": "An error occurred while fetching the case. Please try again.",
+  "caseStatus": "Case Status",
+  "caseType": "Case Type"
 }
