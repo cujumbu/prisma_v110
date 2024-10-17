@@ -2,17 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-interface Claim {
+interface Case {
   id: string;
   orderNumber: string;
   email: string;
   name: string;
   status: string;
   submissionDate: string;
+  type: 'claim' | 'return';
 }
 
 const ClaimStatus: React.FC = () => {
-  const [claim, setClaim] = useState<Claim | null>(null);
+  const [caseData, setCaseData] = useState<Case | null>(null);
   const [orderNumber, setOrderNumber] = useState('');
   const [email, setEmail] = useState('');
   const [error, setError] = useState<string | null>(null);
@@ -20,50 +21,50 @@ const ClaimStatus: React.FC = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    const claimId = location.state?.claimId;
-    if (claimId) {
-      fetchClaim(claimId);
+    const caseId = location.state?.claimId || location.state?.returnId;
+    if (caseId) {
+      fetchCase(caseId);
     }
   }, [location]);
 
-  const fetchClaim = async (id: string) => {
+  const fetchCase = async (id: string) => {
     try {
-      const response = await fetch(`/api/claims/${id}`);
+      const response = await fetch(`/api/cases/${id}`);
       if (!response.ok) {
-        throw new Error(t('failedToFetchClaim'));
+        throw new Error(t('failedToFetchCase'));
       }
-      const claimData = await response.json();
-      setClaim(claimData);
+      const data = await response.json();
+      setCaseData(data);
     } catch (error) {
-      console.error('Error fetching claim:', error);
-      setError(t('errorFetchingClaim'));
+      console.error('Error fetching case:', error);
+      setError(t('errorFetchingCase'));
     }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
+    setCaseData(null);
     try {
-      const response = await fetch(`/api/claims?orderNumber=${orderNumber}&email=${email}`);
+      const response = await fetch(`/api/cases?orderNumber=${orderNumber}&email=${email}`);
       if (!response.ok) {
-        throw new Error(t('failedToFetchClaim'));
+        throw new Error(t('failedToFetchCase'));
       }
-      const claims = await response.json();
-      if (claims.length === 0) {
-        setError(t('noClaimFound'));
-        setClaim(null);
+      const data = await response.json();
+      if (!data) {
+        setError(t('noCaseFound'));
       } else {
-        setClaim(claims[0]);
+        setCaseData(data);
       }
     } catch (error) {
-      console.error('Error fetching claim:', error);
-      setError(t('errorFetchingClaim'));
+      console.error('Error fetching case:', error);
+      setError(t('errorFetchingCase'));
     }
   };
 
   return (
     <div className="max-w-md mx-auto mt-8 bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-4 text-gray-800">{t('checkClaimStatus')}</h2>
+      <h2 className="text-2xl font-bold mb-4 text-gray-800">{t('checkCaseStatus')}</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="orderNumber" className="block text-sm font-medium text-gray-700">{t('orderNumber')}</label>
@@ -97,25 +98,29 @@ const ClaimStatus: React.FC = () => {
 
       {error && <p className="text-red-500 mt-4">{error}</p>}
 
-      {claim && (
+      {caseData && (
         <div className="mt-8 bg-gray-50 p-4 rounded-md">
-          <h3 className="text-lg font-medium text-gray-900 mb-2">{t('claimStatus')}</h3>
+          <h3 className="text-lg font-medium text-gray-900 mb-2">{t('caseStatus')}</h3>
           <dl className="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2">
             <div>
               <dt className="text-sm font-medium text-gray-500">{t('orderNumber')}</dt>
-              <dd className="mt-1 text-sm text-gray-900">{claim.orderNumber}</dd>
+              <dd className="mt-1 text-sm text-gray-900">{caseData.orderNumber}</dd>
             </div>
             <div>
               <dt className="text-sm font-medium text-gray-500">{t('name')}</dt>
-              <dd className="mt-1 text-sm text-gray-900">{claim.name}</dd>
+              <dd className="mt-1 text-sm text-gray-900">{caseData.name}</dd>
             </div>
             <div>
               <dt className="text-sm font-medium text-gray-500">{t('status')}</dt>
-              <dd className="mt-1 text-sm text-gray-900">{t(claim.status.toLowerCase())}</dd>
+              <dd className="mt-1 text-sm text-gray-900">{t(caseData.status.toLowerCase())}</dd>
             </div>
             <div>
               <dt className="text-sm font-medium text-gray-500">{t('submissionDate')}</dt>
-              <dd className="mt-1 text-sm text-gray-900">{new Date(claim.submissionDate).toLocaleString()}</dd>
+              <dd className="mt-1 text-sm text-gray-900">{new Date(caseData.submissionDate).toLocaleString()}</dd>
+            </div>
+            <div>
+              <dt className="text-sm font-medium text-gray-500">{t('caseType')}</dt>
+              <dd className="mt-1 text-sm text-gray-900">{t(caseData.type)}</dd>
             </div>
           </dl>
         </div>
