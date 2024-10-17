@@ -111,7 +111,7 @@
   "claim": "Warranty Claim",
   "return": "Return",
   "pending": "Pending",
-  "inProgress": "In Progress",
+  "inprogress": "In Progress",
   "resolved": "Resolved",
   "rejected": "Rejected"
 }
