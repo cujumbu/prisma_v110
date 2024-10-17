@@ -101,5 +101,11 @@
   "noCaseFound": "Tapausta ei löytynyt",
   "errorFetchingCase": "Tapauksen hakemisessa tapahtui virhe. Yritä uudelleen.",
   "caseStatus": "Tapauksen tila",
-  "caseType": "Tapauksen tyyppi"
+  "caseType": "Tapauksen tyyppi",
+  "claim": "Takuuvaatimus",
+  "return": "Palautus",
+  "pending": "Odottaa",
+  "inProgress": "Käsittelyssä",
+  "resolved": "Ratkaistu",
+  "rejected": "Hylätty"
 }
