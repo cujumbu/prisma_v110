@@ -101,5 +101,11 @@
   "noCaseFound": "Juhtumit ei leitud",
   "errorFetchingCase": "Juhtumi hankimisel tekkis viga. Palun proovige uuesti.",
   "caseStatus": "Juhtumi staatus",
-  "caseType": "Juhtumi tüüp"
+  "caseType": "Juhtumi tüüp",
+  "claim": "Garantiinõue",
+  "return": "Tagastus",
+  "pending": "Ootel",
+  "inProgress": "Töös",
+  "resolved": "Lahendatud",
+  "rejected": "Tagasi lükatud"
 }
