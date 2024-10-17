@@ -107,5 +107,11 @@
   "noCaseFound": "No case found",
   "errorFetchingCase": "Error fetching case.",
   "caseStatus": "Case Status",
-  "caseType": "Case Type"
+  "caseType": "Case Type",
+  "claim": "Warranty Claim",
+  "return": "Return",
+  "pending": "Pending",
+  "inProgress": "In Progress",
+  "resolved": "Resolved",
+  "rejected": "Rejected"
 }
