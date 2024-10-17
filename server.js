@@ -77,59 +77,6 @@ app.patch('/api/claims/:id', async (req, res) => {
   }
 });
 
-app.post('/api/login', async (req, res) => {
-  try {
-    const { email, password } = req.body;
-    const user = await prisma.user.findUnique({ where: { email } });
-    if (user && await bcrypt.compare(password, user.password)) {
-      res.json({ id: user.id, email: user.email, isAdmin: user.isAdmin });
-    } else {
-      res.status(401).json({ error: 'Invalid credentials' });
-    }
-  } catch (error) {
-    console.error('Login error:', error);
-    res.status(500).json({ error: 'An error occurred during login' });
-  }
-});
-
-app.post('/api/admin/create', async (req, res) => {
-  try {
-    const { email, password } = req.body;
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const newAdmin = await prisma.user.create({
-      data: {
-        email,
-        password: hashedPassword,
-        isAdmin: true
-      }
-    });
-    res.status(201).json({ id: newAdmin.id, email: newAdmin.email, isAdmin: newAdmin.isAdmin });
-  } catch (error) {
-    console.error('Error creating admin:', error);
-    res.status(500).json({ error: 'An error occurred while creating the admin user' });
-  }
-});
-
-app.get('/api/brands', async (req, res) => {
-  try {
-    const brands = await prisma.brand.findMany();
-    res.json(brands);
-  } catch (error) {
-    console.error('Error fetching brands:', error);
-    res.status(500).json({ error: 'An error occurred while fetching brands' });
-  }
-});
-
-app.get('/api/users/check', async (req, res) => {
-  try {
-    const userCount = await prisma.user.count();
-    res.json({ exists: userCount > 0 });
-  } catch (error) {
-    console.error('Error checking user existence:', error);
-    res.status(500).json({ error: 'Failed to check user existence' });
-  }
-});
-
 // New routes for returns
 app.post('/api/returns', async (req, res) => {
   try {
@@ -182,6 +129,67 @@ app.patch('/api/returns/:id', async (req, res) => {
   } catch (error) {
     console.error('Error updating return:', error);
     res.status(500).json({ error: 'An error occurred while updating the return' });
+  }
+});
+
+// New endpoint to handle both claims and returns
+app.get('/api/cases', async (req, res) => {
+  try {
+    const { orderNumber, email } = req.query;
+
+    // Check for claim
+    const claim = await prisma.claim.findFirst({
+      where: { orderNumber, email }
+    });
+
+    if (claim) {
+      return res.json({ ...claim, type: 'claim' });
+    }
+
+    // Check for return
+    const returnItem = await prisma.return.findFirst({
+      where: { orderNumber, email }
+    });
+
+    if (returnItem) {
+      return res.json({ ...returnItem, type: 'return' });
+    }
+
+    // If neither claim nor return is found
+    res.status(404).json({ error: 'No case found' });
+  } catch (error) {
+    console.error('Error fetching case:', error);
+    res.status(500).json({ error: 'An error occurred while fetching the case' });
+  }
+});
+
+app.get('/api/cases/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    // Check for claim
+    const claim = await prisma.claim.findUnique({
+      where: { id }
+    });
+
+    if (claim) {
+      return res.json({ ...claim, type: 'claim' });
+    }
+
+    // Check for return
+    const returnItem = await prisma.return.findUnique({
+      where: { id }
+    });
+
+    if (returnItem) {
+      return res.json({ ...returnItem, type: 'return' });
+    }
+
+    // If neither claim nor return is found
+    res.status(404).json({ error: 'Case not found' });
+  } catch (error) {
+    console.error('Error fetching case:', error);
+    res.status(500).json({ error: 'An error occurred while fetching the case' });
   }
 });
 
